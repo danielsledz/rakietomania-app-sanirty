@@ -123,7 +123,7 @@ export const mission = defineType({
 
     defineField({
       name: 'landingPad',
-      title: 'Landing Pad',
+      title: 'Landing Pad (only for Falcon 9 or Heavy)',
       type: 'array',
       of: [
         {
@@ -170,7 +170,7 @@ export const mission = defineType({
 
     defineField({
       name: 'boosters',
-      title: 'Boosters',
+      title: 'Boosters (only Falcon 9 or Heavy)',
       type: 'array',
       of: [
         {
@@ -178,6 +178,35 @@ export const mission = defineType({
           to: [{type: 'booster'}],
         },
       ],
+    }),
+
+    defineField({
+      name: 'environment',
+      title: 'Environment',
+      type: 'string',
+      initialValue: 'development',
+      options: {
+        list: [
+          {title: 'Production', value: 'production'},
+          {title: 'Development', value: 'development'},
+        ],
+        layout: 'radio',
+      },
+      description: 'Select the environment for the mission',
+    }),
+
+    defineField({
+      name: 'dateUpdateMethod',
+      title: 'Date Update Method',
+      type: 'string',
+      initialValue: 'auto',
+      options: {
+        list: [
+          {title: 'Automatically by bot', value: 'auto'},
+          {title: 'Manually by user', value: 'manual'},
+        ],
+        layout: 'radio',
+      },
     }),
 
     defineField({
