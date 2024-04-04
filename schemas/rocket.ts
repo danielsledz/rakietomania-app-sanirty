@@ -39,8 +39,15 @@ export const rocket = defineType({
     defineField({
       name: 'generalInformations',
       title: 'General Informations',
-      type: 'text',
       description: 'The general informations of the rocket',
+      type: 'array',
+      of: [
+        {
+          name: 'specification',
+          title: 'Specification',
+          type: 'string',
+        },
+      ],
     }),
     defineField({
       name: 'carrying_capacity',
@@ -48,9 +55,9 @@ export const rocket = defineType({
       type: 'array',
       of: [
         {
-          name: 'carrying_capacity',
-          title: 'Carrying Capacity',
-          type: 'carrying_capacity',
+          name: 'capacity',
+          title: 'Carrying  Capacity',
+          type: 'string',
         },
       ],
     }),

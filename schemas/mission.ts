@@ -27,7 +27,15 @@ export const mission = defineType({
       name: 'name',
       title: 'Name',
       type: 'string',
-      description: 'The name of the mission',
+      description: 'The name of the mission visible to users',
+      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
+      name: 'nameApi',
+      title: 'Name API',
+      type: 'string',
+      description: 'The name of the mission in API',
       validation: (Rule) => Rule.required(),
     }),
 
@@ -118,6 +126,12 @@ export const mission = defineType({
     defineField({
       name: 'livestream',
       title: 'Livestream',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'launchPad',
+      title: 'Launch Pad',
       type: 'string',
     }),
 
