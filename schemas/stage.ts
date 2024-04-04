@@ -13,8 +13,7 @@ export const stage = defineType({
     prepare(selection) {
       const {title} = selection
       return {
-        title: title, // Tutaj możesz modyfikować wartość tytułu, np. dodawać prefix, suffix itp.
-        // subtitle: 'Tu możesz dodać podtytuł, jeśli potrzebujesz'
+        title: title,
       }
     },
   },
