@@ -32,10 +32,10 @@ export const mission = defineType({
     }),
 
     defineField({
-      name: 'nameApi',
-      title: 'Name API',
+      name: 'apiMissionID',
+      title: 'API mission ID',
       type: 'string',
-      description: 'The name of the mission in API',
+      description: 'The ID of the mission in API',
       validation: (Rule) => Rule.required(),
     }),
 
