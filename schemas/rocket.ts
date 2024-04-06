@@ -107,7 +107,7 @@ export const rocket = defineType({
     }),
 
     defineField({
-      name: 'Agencies',
+      name: 'agencies',
       title: 'Agencies',
       type: 'reference',
       to: [{type: 'agency'}],
