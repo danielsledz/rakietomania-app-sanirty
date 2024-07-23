@@ -18,10 +18,16 @@ export const payload = defineType({
       description: 'The description of the payload',
     }),
     defineField({
-      name: 'specification',
-      title: 'Specifiaction',
-      type: 'text',
-      description: 'The specification of the payload',
+      name: 'specifications',
+      title: 'Specifications',
+      type: 'array',
+      of: [
+        {
+          name: 'specification',
+          title: 'Specification',
+          type: 'string',
+        },
+      ],
     }),
     defineField({
       name: 'image',

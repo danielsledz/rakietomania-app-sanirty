@@ -59,6 +59,10 @@ export const mission = defineType({
           {title: 'Partial Failed', value: 'PartialFailed'},
           {title: 'Confirmed', value: 'Confirmed'},
           {title: 'To Be Confirmed', value: 'ToBeConfirmed'},
+          {
+            title: 'To Be Determined',
+            value: 'ToBeDetermined',
+          },
           {title: 'Hold', value: 'Hold'},
           {title: 'Canceled', value: 'Canceled'},
           {title: 'Postponed', value: 'Postponed'},
