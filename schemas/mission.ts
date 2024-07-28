@@ -231,6 +231,7 @@ export const mission = defineType({
       name: 'archived',
       title: 'Archived',
       type: 'boolean',
+      initialValue: false,
     }),
   ],
 })
