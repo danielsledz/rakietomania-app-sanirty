@@ -9,7 +9,7 @@ export default {
       type: 'string',
     },
     {
-      name: 'rocketID',
+      name: 'id',
       title: 'Rocket ID',
       type: 'string',
     },
