@@ -17,6 +17,13 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
+      fields: [
+        {
+          name: 'caption',
+          title: 'Caption',
+          type: 'string',
+        },
+      ],
     },
   ],
 }

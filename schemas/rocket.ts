@@ -68,6 +68,13 @@ export const rocket = defineType({
       type: 'image',
       description: 'The main image of the rocket',
       validation: (Rule) => Rule.required(),
+      fields: [
+        {
+          name: 'caption',
+          title: 'Caption',
+          type: 'string',
+        },
+      ],
     }),
     defineField({
       name: 'gallery',
@@ -77,7 +84,22 @@ export const rocket = defineType({
         {
           name: 'gallery',
           title: 'Gallery',
-          type: 'gallery',
+          type: 'object',
+          fields: [
+            {
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              name: 'caption',
+              title: 'Caption',
+              type: 'string',
+            },
+          ],
         },
       ],
     }),
