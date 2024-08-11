@@ -49,5 +49,19 @@ export const booster = defineType({
       title: 'Current Location',
       type: 'string',
     }),
+
+    defineField({
+      name: 'missions',
+      title: 'Missions',
+      type: 'array',
+      of: [
+        {
+          name: 'mission',
+          title: 'Mission',
+          type: 'reference',
+          to: [{type: 'mission'}],
+        },
+      ],
+    }),
   ],
 })

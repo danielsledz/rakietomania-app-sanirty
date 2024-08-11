@@ -147,5 +147,17 @@ export const rocket = defineType({
       type: 'string',
       description: 'The number of failed launches',
     }),
+    defineField({
+      name: 'partial_successfull_launches',
+      title: 'Partial successfull launches',
+      type: 'string',
+      description: 'The number of partial successfull launches',
+    }),
+    defineField({
+      name: 'partial_failed_launches',
+      title: 'Partial failed launches',
+      type: 'string',
+      description: 'The number of partial failed launches',
+    }),
   ],
 })

@@ -1,7 +1,7 @@
 export default {
   name: 'prototype',
   title: 'Prototype',
-  type: 'object',
+  type: 'document',
   fields: [
     {
       name: 'name',
@@ -17,11 +17,17 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
+
       fields: [
         {
           name: 'caption',
-          title: 'Caption',
           type: 'string',
+          title: 'Caption',
+        },
+        {
+          name: 'attribution',
+          type: 'string',
+          title: 'Attribution',
         },
       ],
     },
