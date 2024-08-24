@@ -140,19 +140,6 @@ export const mission = defineType({
     }),
 
     defineField({
-      name: 'landingPad',
-      title: 'Landing Pad (only for Falcon 9 or Heavy)',
-      type: 'array',
-      of: [
-        {
-          name: 'landing',
-          title: 'landing',
-          type: 'landing',
-        },
-      ],
-    }),
-
-    defineField({
       name: 'changeLogs',
       title: 'Change Logs',
       type: 'array',
@@ -185,15 +172,13 @@ export const mission = defineType({
         },
       ],
     }),
-
     defineField({
       name: 'boosters',
       title: 'Boosters (only Falcon 9 or Heavy)',
       type: 'array',
       of: [
         {
-          type: 'reference',
-          to: [{type: 'booster'}],
+          type: 'boosterDetail',
         },
       ],
     }),
@@ -233,5 +218,37 @@ export const mission = defineType({
       type: 'boolean',
       initialValue: false,
     }),
+  ],
+})
+
+export const boosterDetail = defineType({
+  name: 'boosterDetail',
+  title: 'Booster Detail',
+  type: 'object',
+  fields: [
+    {
+      name: 'boosterReference',
+      title: 'Booster Reference',
+      type: 'reference',
+      to: [{type: 'booster'}],
+    },
+    {
+      name: 'landingPad',
+      title: 'Landing Pad',
+      type: 'string',
+    },
+    {
+      name: 'landingStatus',
+      title: 'Landing Status',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Success', value: 'Success'},
+          {title: 'Failure', value: 'Failure'},
+          {title: 'No Attempt', value: 'NoAttempt'},
+        ],
+      },
+      initialValue: 'Success',
+    },
   ],
 })

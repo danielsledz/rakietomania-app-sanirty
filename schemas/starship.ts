@@ -58,6 +58,12 @@ export default {
       type: 'string',
       fieldset: 'overview',
     },
+    {
+      name: 'isOverviewSectionVisible',
+      title: 'Show Overview Section',
+      type: 'boolean',
+      fieldset: 'overview',
+    },
 
     // Upcoming Flight Section
     {

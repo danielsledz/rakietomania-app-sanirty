@@ -1,7 +1,8 @@
 import {agency} from './agency'
 import {booster} from './booster'
+import customImage from './customImage'
 import {engine} from './engine'
-import {landingpad, mission} from './mission'
+import {boosterDetail, landingpad, mission} from './mission'
 import {payload} from './payload'
 import {gallery, videos} from './prototype'
 import {CarryingCapacity, rocket} from './rocket'
@@ -24,4 +25,6 @@ export const schemaTypes = [
   starship,
   starshipPrototype,
   checklistItem,
+  boosterDetail,
+  customImage,
 ]
