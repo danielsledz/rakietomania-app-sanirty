@@ -6,14 +6,14 @@ export const stage = defineType({
   type: 'document',
   preview: {
     select: {
-      title: 'nameForUS',
-      image: 'image',
+      title: 'nameForUS', // the title to display
+      media: 'image', // the image to display
     },
-
     prepare(selection) {
-      const {title} = selection
+      const {title, media} = selection
       return {
         title: title,
+        media: media, // ensure the image is passed here for display
       }
     },
   },

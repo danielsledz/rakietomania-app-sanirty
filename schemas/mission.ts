@@ -158,6 +158,7 @@ export const mission = defineType({
       type: 'reference',
       to: [{type: 'rocket'}],
       description: 'Related rocket',
+      validation: (Rule) => Rule.required(),
     }),
 
     defineField({
@@ -248,7 +249,12 @@ export const boosterDetail = defineType({
           {title: 'No Attempt', value: 'NoAttempt'},
         ],
       },
-      initialValue: 'Success',
     },
   ],
+  preview: {
+    select: {
+      title: 'boosterReference.name', // assuming the booster document has a "name" field
+      subtitle: 'landingPad',
+    },
+  },
 })

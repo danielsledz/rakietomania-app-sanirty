@@ -4,6 +4,19 @@ export const engine = defineType({
   name: 'engine',
   title: 'Engine',
   type: 'document',
+  preview: {
+    select: {
+      title: 'name', // wybiera tytuł, który będzie wyświetlany w podglądzie
+      media: 'image', // wybiera obraz, który będzie wyświetlany w podglądzie
+    },
+    prepare(selection) {
+      const {title, media} = selection
+      return {
+        title: title,
+        media: media, // przekazuje obraz do podglądu
+      }
+    },
+  },
   fields: [
     defineField({
       name: 'name',
