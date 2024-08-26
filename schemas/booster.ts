@@ -44,10 +44,12 @@ export const booster = defineType({
       validation: (Rule) => Rule.required(),
     }),
 
+    // do usunięcia
     defineField({
       name: 'currentLocation',
       title: 'Current Location',
       type: 'string',
+      hidden: true,
     }),
   ],
 })

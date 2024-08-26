@@ -1,10 +1,10 @@
 import {agency} from './agency'
+import appVersion from './appVersion'
 import {booster} from './booster'
 import customImage from './customImage'
 import {engine} from './engine'
 import {boosterDetail, landingpad, mission} from './mission'
 import {payload} from './payload'
-import {gallery, videos} from './prototype'
 import {CarryingCapacity, rocket} from './rocket'
 import {stage} from './stage'
 import starship, {checklistItem} from './starship'
@@ -20,11 +20,12 @@ export const schemaTypes = [
   stage,
   landingpad,
   CarryingCapacity,
-  gallery,
-  videos,
+  // gallery,
+  // videos,
   starship,
   starshipPrototype,
   checklistItem,
   boosterDetail,
   customImage,
+  appVersion,
 ]

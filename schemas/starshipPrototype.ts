@@ -2,6 +2,7 @@ export default {
   name: 'prototype',
   title: 'Prototype',
   type: 'document',
+
   fields: [
     {
       name: 'name',
