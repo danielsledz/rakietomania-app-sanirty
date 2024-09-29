@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'RakietomaniaApp',
 
   projectId: 'vjzwc7w5',
-  dataset: 'production',
+  dataset: 'development',
 
   plugins: [structureTool(), visionTool()],
 

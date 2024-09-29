@@ -162,6 +162,22 @@ export const mission = defineType({
     }),
 
     defineField({
+      name: 'rocketType',
+      title: 'Rocket Type (Crewed, Uncrewed, Cargo, Constellation)',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+      initialValue: 'Uncrewed',
+      options: {
+        list: [
+          {title: 'Crewed', value: 'Crewed'},
+          {title: 'Uncrewed', value: 'Uncrewed'},
+          {title: 'Cargo', value: 'Cargo'},
+          {title: 'Constellation (Starlink etc.)', value: 'Constellation'},
+        ],
+      },
+    }),
+
+    defineField({
       name: 'payload',
       title: 'Payload',
       type: 'array',
