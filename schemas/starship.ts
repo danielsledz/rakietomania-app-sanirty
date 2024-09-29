@@ -91,6 +91,12 @@ export default {
       of: [{type: 'string'}],
       fieldset: 'upcomingFlight',
     },
+    {
+      name: 'isFlightPlanVisible',
+      title: 'Show Flight Plan',
+      type: 'boolean',
+      fieldset: 'upcomingFlight',
+    },
 
     // Launch Set Section
     {
@@ -112,6 +118,12 @@ export default {
       of: [{type: 'prototype'}], // Reference the 'prototype' schema type here
       fieldset: 'launchSet',
     },
+    {
+      name: 'isLaunchSetVisible',
+      title: 'Show Launch Set',
+      type: 'boolean',
+      fieldset: 'launchSet',
+    },
 
     // Checlist Section
     {
@@ -127,6 +139,12 @@ export default {
       of: [{type: 'checklistItem'}], // Reference the custom checklist item type
       fieldset: 'checklist',
     },
+    {
+      name: 'isChecklistVisible',
+      title: 'Show Checklist',
+      type: 'boolean',
+      fieldset: 'checklist',
+    },
     // Fun Facts Section
     {
       name: 'funFactsTitle',
@@ -139,6 +157,12 @@ export default {
       title: 'Fun Facts',
       type: 'array',
       of: [{type: 'string'}],
+      fieldset: 'funFacts',
+    },
+    {
+      name: 'isFunFactsVisible',
+      title: 'Show Fun Facts',
+      type: 'boolean',
       fieldset: 'funFacts',
     },
   ],
